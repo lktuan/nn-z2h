@@ -1,0 +1,4 @@
+---
+title: "NN-Z2H Lesson 1: The spelled-out intro to neural networks and backpropagation - building micrograd"
+---
+
