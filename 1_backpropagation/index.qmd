@@ -8,7 +8,14 @@ code-fold: show
 code-annotations: hover
 
 format:
-  html:
+  pdf:
+    documentclass: scrbook
+    papersize: A4
+    highlight-style: github
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    colorlinks: true
     code-overflow: wrap
 ---
 **Upfront-note**: There are also greate resources in Vietnamese for learning Backpropagation, for e.g.:
@@ -252,7 +259,7 @@ def trace(root):
     return nodes, edges
 
 def draw_dot(root):
-    dot = Digraph(format='svg', graph_attr={'rankdir': 'LR'}) # LR = from left to right
+    dot = Digraph(format='pdf', graph_attr={'rankdir': 'LR'}) # LR = from left to right
     nodes, edges = trace(root)
     for n in nodes:
         uid = str(id(n))
@@ -285,6 +292,7 @@ os.environ["PATH"] += os.pathsep + 'C:\Program Files (x86)\Graphviz\bin\dot.exe'
 
 Now we can draw 🚀. 
 ```{python}
+#| eval: false
 draw_dot(d)
 ```
 
@@ -304,6 +312,7 @@ We need to know how are those **leaf nodes** `a`, `b`, `c`, `f` are impacting to
 
 :::{.column-page}
 ```{python}
+#| eval: false
 draw_dot(L)
 ```
 :::
@@ -376,6 +385,7 @@ We can see the changes, `L` increased a little bit as expected.
 
 :::{.column-page}
 ```{python}
+#| eval: false
 draw_dot(L)
 ```
 :::
@@ -435,6 +445,7 @@ o = n.tanh(); o.label = 'o' # not define yet
 ```
 :::{.column-page}
 ```{python}
+#| eval: false
 draw_dot(o)
 ```
 :::
@@ -470,6 +481,7 @@ From here we will manually calculate the gradient again:
 
 :::{.column-page}
 ```{python}
+#| eval: false
 draw_dot(o)
 ```
 :::
@@ -493,6 +505,7 @@ x2w2._backward()
 
 :::{.column-page}
 ```{python}
+#| eval: false
 draw_dot(o)
 ```
 :::
@@ -548,6 +561,7 @@ o.backward()
 
 :::{.column-page}
 ```{python}
+#| eval: false
 draw_dot(o)
 ```
 :::
@@ -559,7 +573,7 @@ This `a.grad` should be `2.0`.
 a = Value(3.0, label='a')
 b = a + a; b.label = 'b' # this case self and other are both a, we should not overwrite the gradient, we should accumulate it.
 b.backward()
-draw_dot(b)
+# draw_dot(b)
 ```
 
 ## breaking up a `tanh`, exercising with more operations
@@ -656,6 +670,7 @@ o.backward()
 
 :::{.column-screen}
 ```{python}
+#| eval: false
 draw_dot(o)
 ```
 :::
@@ -772,6 +787,7 @@ m(x)
 
 :::{.column-screen}
 ```{python}
+#| eval: false
 draw_dot(m(x))
 ```
 :::
@@ -810,6 +826,7 @@ print('grad of 1st neuron in 1st layer: ',m.layers[0].neurons[0].w[0].grad)
 
 :::{.column-screen}
 ```{python}
+#| eval: false
 draw_dot(loss)
 ```
 :::
@@ -855,6 +872,7 @@ loss
 ```
 
 Yeah the loss decreased. In short, the process is:
+
 ```{mermaid}
 %%{init: {'theme':'dark'}}%%
 flowchart LR
