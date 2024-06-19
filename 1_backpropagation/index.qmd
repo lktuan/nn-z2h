@@ -5,13 +5,10 @@ date: 06-16-2024
 date-modified: 06-18-2024
 code-tools: true
 code-fold: show
-code-annotations: hover
+code-annotations: below
 
 format:
-  pdf:
-    documentclass: scrbook
-    papersize: A4
-    highlight-style: github
+  html:
     toc: true
     toc-depth: 2
     number-sections: true
