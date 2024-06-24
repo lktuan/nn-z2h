@@ -9,6 +9,7 @@ code-annotations: below
 
 format:
   html:
+    theme: flatly
     toc: true
     toc-depth: 2
     number-sections: true
