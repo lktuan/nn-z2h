@@ -1,7 +1,8 @@
 # NN-Z2H
+
 A series of learning Neural Network from Zero to Hero under tutorial from Andrej Karpathy. I wrote in .qmd files instead of .ipynb.
 
-Youtube tutorial link: <https://www.youtube.com/watch?v=VMj-3S1tku0>
+Youtube tutorial link: <https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ>
 
 # 🚀 Checklist:
 
@@ -15,3 +16,8 @@ Youtube tutorial link: <https://www.youtube.com/watch?v=VMj-3S1tku0>
 8. [ ] [State of GPT | BRK216HFS](https://www.youtube.com/watch?v=bZQun8Y4L2A&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=8)
 9.  [ ] [Let's build the GPT Tokenizer](https://www.youtube.com/watch?v=zduSFxRajkE&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=9)
 10. [ ] [Let's reproduce GPT-2 (124M)](https://www.youtube.com/watch?v=l8pRSuU81PU&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=10)
+
+# Rendering
+
+1. pdf: `quarto render folder\index.qmd --pdf`
+2. ipynb: `quarto render folder\index.qmd --to jupyter`
