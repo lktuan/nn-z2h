@@ -1,6 +1,6 @@
 # NN-Z2H
 
-A series of learning Neural Network from Zero to Hero under tutorial from Andrej Karpathy. I wrote in .qmd files instead of .ipynb.
+A series of learning Neural Network from Zero to Hero under tutorial from Andrej Karpathy. I wrote in .qmd files instead of .ipynb (but there are .ipynb files for viewing in browser!).
 
 Youtube tutorial link: <https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ>
 
